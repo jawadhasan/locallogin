@@ -42,6 +42,7 @@ namespace LocalLoginDemo.Web.Controllers
         [Route("getData")]
         public string GetData()
         {
+            var userClaims = User.Claims.ToList();
             return Guid.NewGuid().ToString("N");
         }
     }
